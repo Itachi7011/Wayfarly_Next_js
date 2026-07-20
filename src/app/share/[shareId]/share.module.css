@@ -1,0 +1,142 @@
+/* wayfarly-share-* : scoped, collision-safe class names */
+
+.wayfarly-share-banner {
+  background: var(--wf-ink);
+  color: var(--wf-paper);
+  text-align: center;
+  font-size: 0.8rem;
+  padding: 0.6rem 1rem;
+}
+
+.wayfarly-share-banner a {
+  color: var(--wf-brass-soft);
+  font-weight: 700;
+}
+
+.wayfarly-share-hero {
+  height: 240px;
+  position: relative;
+  display: flex;
+  align-items: flex-end;
+}
+
+.wayfarly-share-hero-overlay {
+  position: absolute;
+  inset: 0;
+  background: linear-gradient(to top, rgba(13, 27, 42, 0.75), rgba(13, 27, 42, 0.05));
+}
+
+.wayfarly-share-hero-content {
+  position: relative;
+  max-width: 1000px;
+  margin: 0 auto;
+  padding: 0 1.5rem 1.6rem;
+  width: 100%;
+  color: #fff;
+}
+
+.wayfarly-share-hero-title {
+  font-family: var(--font-display);
+  font-size: clamp(1.8rem, 4vw, 2.6rem);
+  font-weight: 600;
+}
+
+.wayfarly-share-hero-meta {
+  margin-top: 0.4rem;
+  font-family: var(--font-mono);
+  font-size: 0.82rem;
+  opacity: 0.9;
+}
+
+.wayfarly-share-body {
+  max-width: 1000px;
+  margin: 0 auto;
+  padding: 2.2rem 1.5rem 4rem;
+  display: grid;
+  grid-template-columns: 1.5fr 1fr;
+  gap: 1.5rem;
+}
+
+@media (max-width: 800px) {
+  .wayfarly-share-body {
+    grid-template-columns: 1fr;
+  }
+}
+
+.wayfarly-share-panel {
+  padding: 1.4rem;
+  border-radius: 18px;
+  background: var(--surface);
+  border: 1px solid var(--border-color);
+  margin-bottom: 1.2rem;
+}
+
+.wayfarly-share-panel-title {
+  font-weight: 700;
+  font-size: 0.98rem;
+  margin-bottom: 0.9rem;
+}
+
+.wayfarly-share-day-block {
+  padding: 0.8rem 0;
+  border-top: 1px dashed var(--border-color);
+}
+
+.wayfarly-share-day-block:first-child {
+  border-top: none;
+  padding-top: 0;
+}
+
+.wayfarly-share-day-label {
+  font-family: var(--font-mono);
+  font-size: 0.74rem;
+  color: var(--wf-brass);
+  font-weight: 700;
+  margin-bottom: 0.4rem;
+}
+
+.wayfarly-share-activity-row {
+  display: flex;
+  gap: 0.7rem;
+  font-size: 0.84rem;
+  padding: 0.25rem 0;
+}
+
+.wayfarly-share-activity-time {
+  flex: 0 0 90px;
+  opacity: 0.55;
+  font-size: 0.74rem;
+  font-weight: 700;
+  text-transform: uppercase;
+}
+
+.wayfarly-share-checklist-item {
+  display: flex;
+  align-items: center;
+  gap: 0.6rem;
+  padding: 0.4rem 0;
+  font-size: 0.85rem;
+}
+
+.wayfarly-share-checklist-item[data-done="true"] {
+  opacity: 0.5;
+  text-decoration: line-through;
+}
+
+.wayfarly-share-cta {
+  text-align: center;
+  padding: 2.2rem 1.5rem;
+  border-top: 1px solid var(--border-color);
+}
+
+.wayfarly-share-cta-btn {
+  display: inline-flex;
+  align-items: center;
+  gap: 0.5rem;
+  margin-top: 0.9rem;
+  padding: 0.8rem 1.5rem;
+  border-radius: 999px;
+  background: linear-gradient(135deg, var(--wf-brass), var(--wf-coral));
+  color: var(--wf-ink);
+  font-weight: 700;
+}

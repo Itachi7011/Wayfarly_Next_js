@@ -1,0 +1,481 @@
+/*!************************************************************************************************************************************************************************************************************************************************************************************!*\
+  !*** css ./node_modules/next/dist/build/webpack/loaders/css-loader/src/index.js??ruleSet[1].rules[15].oneOf[5].use[2]!./node_modules/next/dist/build/webpack/loaders/postcss-loader/src/index.js??ruleSet[1].rules[15].oneOf[5].use[3]!./src/app/trips/[tripId]/detail.module.css ***!
+  \************************************************************************************************************************************************************************************************************************************************************************************/
+/* wayfarly-tripdetail-* : scoped, collision-safe class names */
+
+.detail_wayfarly-tripdetail-hero__4ZlKw {
+  height: 460px;
+  position: relative;
+  display: flex;
+  align-items: flex-end;
+}
+
+.detail_wayfarly-tripdetail-hero-overlay__4sQ7R {
+  position: absolute;
+  inset: 0;
+  background: linear-gradient(to top, rgba(13, 27, 42, 0.75), rgba(13, 27, 42, 0.05));
+}
+
+.detail_wayfarly-tripdetail-hero-content__TEb7T {
+  position: relative;
+  max-width: 1280px;
+  margin: 0 auto;
+  padding: 0 1.5rem 1.6rem;
+  width: 100%;
+  color: #fff;
+}
+
+.detail_wayfarly-tripdetail-hero-status__VjLNl {
+  display: inline-block;
+  font-size: 0.7rem;
+  font-weight: 700;
+  padding: 0.3rem 0.7rem;
+  border-radius: 999px;
+  background: rgba(255, 255, 255, 0.15);
+  backdrop-filter: blur(4px);
+  margin-bottom: 0.6rem;
+}
+
+.detail_wayfarly-tripdetail-hero-title__8KviW {
+  font-family: var(--font-display);
+  font-size: clamp(1.8rem, 4vw, 2.6rem);
+  font-weight: 600;
+}
+
+.detail_wayfarly-tripdetail-hero-meta__P0LDX {
+  margin-top: 0.4rem;
+  font-family: var(--font-mono);
+  font-size: 0.82rem;
+  opacity: 0.9;
+}
+
+.detail_wayfarly-tripdetail-body__7oy8m {
+  max-width: 1280px;
+  margin: 0 auto;
+  padding: 2.2rem 1.5rem 4rem;
+  display: grid;
+  grid-template-columns: 1.6fr 1fr;
+  gap: 1.6rem;
+}
+
+@media (max-width: 900px) {
+  .detail_wayfarly-tripdetail-body__7oy8m {
+    grid-template-columns: 1fr;
+  }
+}
+
+.detail_wayfarly-tripdetail-panel__TWvDX {
+  padding: 1.5rem;
+  border-radius: 20px;
+  background: var(--surface);
+  border: 1px solid var(--border-color);
+  margin-bottom: 1.4rem;
+}
+
+.detail_wayfarly-tripdetail-panel-title__zzFBI {
+  font-weight: 700;
+  font-size: 1rem;
+  margin-bottom: 1rem;
+  display: flex;
+  align-items: center;
+  gap: 0.5rem;
+}
+
+.detail_wayfarly-tripdetail-day-block__9L8ac {
+  padding: 0.9rem 0;
+  border-top: 1px dashed var(--border-color);
+}
+
+.detail_wayfarly-tripdetail-day-block__9L8ac:first-child {
+  border-top: none;
+  padding-top: 0;
+}
+
+.detail_wayfarly-tripdetail-day-label__aLOmm {
+  font-family: var(--font-mono);
+  font-size: 0.76rem;
+  color: var(--wf-brass);
+  font-weight: 700;
+  margin-bottom: 0.5rem;
+}
+
+.detail_wayfarly-tripdetail-activity-row__YCvra {
+  display: flex;
+  gap: 0.7rem;
+  font-size: 0.85rem;
+  padding: 0.3rem 0;
+}
+
+.detail_wayfarly-tripdetail-activity-time__qjEWL {
+  flex: 0 0 90px;
+  opacity: 0.55;
+  font-size: 0.76rem;
+  font-weight: 700;
+  text-transform: uppercase;
+}
+
+.detail_wayfarly-tripdetail-budget-row__vcNmN {
+  display: flex;
+  justify-content: space-between;
+  padding: 0.6rem 0;
+  font-size: 0.88rem;
+  border-top: 1px solid var(--border-color);
+}
+
+.detail_wayfarly-tripdetail-budget-row__vcNmN:first-of-type {
+  border-top: none;
+}
+
+.detail_wayfarly-tripdetail-budget-value__W8_KC {
+  font-family: var(--font-mono);
+  font-weight: 700;
+}
+
+.detail_wayfarly-tripdetail-checklist-item__N8wG4 {
+  display: flex;
+  align-items: center;
+  gap: 0.6rem;
+  padding: 0.5rem 0;
+  font-size: 0.87rem;
+}
+
+.detail_wayfarly-tripdetail-checklist-item__N8wG4[data-done="true"] {
+  opacity: 0.5;
+  text-decoration: line-through;
+}
+
+.detail_wayfarly-tripdetail-gallery-empty__CHGlX {
+  font-size: 0.85rem;
+  opacity: 0.55;
+  text-align: center;
+  padding: 1.4rem 0;
+  border: 1.5px dashed var(--border-color);
+  border-radius: 14px;
+}
+
+.detail_wayfarly-tripdetail-notes-text__hyiDe {
+  font-size: 0.88rem;
+  line-height: 1.6;
+  opacity: 0.8;
+}
+
+.detail_wayfarly-tripdetail-edit-link__KxBMh {
+  display: inline-flex;
+  align-items: center;
+  gap: 0.4rem;
+  font-size: 0.82rem;
+  font-weight: 700;
+  padding: 0.5rem 0.9rem;
+  border-radius: 999px;
+  background: var(--wf-brass);
+  color: var(--wf-ink);
+}
+
+.detail_wayfarly-tripdetail-action-row__dWjLf {
+  display: flex;
+  gap: 0.6rem;
+  flex-wrap: wrap;
+}
+
+.detail_wayfarly-tripdetail-export-btn__1OMoU {
+  display: inline-flex;
+  align-items: center;
+  gap: 0.4rem;
+  font-size: 0.82rem;
+  font-weight: 700;
+  padding: 0.5rem 0.9rem;
+  border-radius: 999px;
+  border: 1px solid var(--border-color);
+  background: var(--surface);
+  color: var(--foreground);
+  transition: background-color 0.2s ease, transform 0.2s ease;
+}
+
+.detail_wayfarly-tripdetail-export-btn__1OMoU:hover:not(:disabled) {
+  background: var(--surface-dim);
+  transform: translateY(-1px);
+}
+
+.detail_wayfarly-tripdetail-export-btn__1OMoU:disabled {
+  opacity: 0.6;
+  cursor: wait;
+}
+
+/* Inline add rows (checklist item, itinerary activity) */
+.detail_wayfarly-tripdetail-inline-add-row__nMGlH {
+  display: flex;
+  gap: 0.4rem;
+  margin-top: 0.7rem;
+}
+
+.detail_wayfarly-tripdetail-inline-input__VijvL {
+  flex: 1;
+  min-width: 0;
+  padding: 0.5rem 0.7rem;
+  border-radius: 10px;
+  border: 1px solid var(--border-color);
+  background: var(--surface-dim);
+  color: var(--foreground);
+  font-size: 0.82rem;
+}
+
+.detail_wayfarly-tripdetail-inline-input__VijvL:focus {
+  outline: none;
+  border-color: var(--wf-brass);
+}
+
+.detail_wayfarly-tripdetail-inline-select__4c1tk {
+  padding: 0.5rem 0.5rem;
+  border-radius: 10px;
+  border: 1px solid var(--border-color);
+  background: var(--surface-dim);
+  color: var(--foreground);
+  font-size: 0.78rem;
+  flex: 0 0 auto;
+}
+
+.detail_wayfarly-tripdetail-inline-add-btn__Q09rN {
+  flex: 0 0 auto;
+  width: 34px;
+  height: 34px;
+  border-radius: 10px;
+  display: grid;
+  place-items: center;
+  background: var(--wf-brass);
+  color: var(--wf-ink);
+  transition: transform 0.2s ease, background-color 0.2s ease;
+}
+
+.detail_wayfarly-tripdetail-inline-add-btn__Q09rN:hover {
+  transform: translateY(-1px);
+  background: var(--wf-brass-soft);
+}
+
+/* Itinerary day header + remove controls */
+.detail_wayfarly-tripdetail-day-header___aoKT {
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  margin-bottom: 0.5rem;
+}
+
+.detail_wayfarly-tripdetail-day-header___aoKT .detail_wayfarly-tripdetail-day-label__aLOmm {
+  margin-bottom: 0;
+}
+
+.detail_wayfarly-tripdetail-day-remove__D6X_H,
+.detail_wayfarly-tripdetail-activity-remove__PBUck {
+  width: 22px;
+  height: 22px;
+  border-radius: 999px;
+  display: grid;
+  place-items: center;
+  opacity: 0.45;
+  flex-shrink: 0;
+  transition: opacity 0.2s ease, background-color 0.2s ease, color 0.2s ease;
+}
+
+.detail_wayfarly-tripdetail-day-remove__D6X_H:hover,
+.detail_wayfarly-tripdetail-activity-remove__PBUck:hover {
+  opacity: 1;
+  background: color-mix(in srgb, var(--wf-coral) 16%, transparent);
+  color: var(--wf-coral);
+}
+
+.detail_wayfarly-tripdetail-add-day-btn__8fiSM {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  gap: 0.4rem;
+  width: 100%;
+  margin-top: 1rem;
+  padding: 0.6rem;
+  border-radius: 12px;
+  border: 1.5px dashed var(--border-color);
+  font-size: 0.82rem;
+  font-weight: 700;
+  opacity: 0.75;
+  transition: border-color 0.2s ease, opacity 0.2s ease, background-color 0.2s ease;
+}
+
+.detail_wayfarly-tripdetail-add-day-btn__8fiSM:hover {
+  opacity: 1;
+  border-color: var(--wf-brass);
+  background: var(--surface-dim);
+}
+
+/* Notes editing */
+.detail_wayfarly-tripdetail-notes-textarea__SeJpS {
+  width: 100%;
+  min-height: 100px;
+  padding: 0.7rem 0.85rem;
+  border-radius: 12px;
+  border: 1px solid var(--border-color);
+  background: var(--surface-dim);
+  color: var(--foreground);
+  font-size: 0.87rem;
+  line-height: 1.6;
+  resize: vertical;
+  font-family: inherit;
+}
+
+.detail_wayfarly-tripdetail-notes-textarea__SeJpS:focus {
+  outline: none;
+  border-color: var(--wf-brass);
+}
+
+.detail_wayfarly-tripdetail-notes-footer__MuNmE {
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  margin-top: 0.6rem;
+}
+
+.detail_wayfarly-tripdetail-notes-status___SiRp {
+  font-size: 0.76rem;
+  opacity: 0.6;
+  display: inline-flex;
+  align-items: center;
+  gap: 0.25rem;
+}
+
+.detail_wayfarly-tripdetail-notes-save-btn__gVeE9 {
+  padding: 0.45rem 0.9rem;
+  border-radius: 999px;
+  background: var(--wf-brass);
+  color: var(--wf-ink);
+  font-size: 0.78rem;
+  font-weight: 700;
+  transition: transform 0.2s ease, opacity 0.2s ease;
+}
+
+.detail_wayfarly-tripdetail-notes-save-btn__gVeE9:hover:not(:disabled) {
+  transform: translateY(-1px);
+}
+
+.detail_wayfarly-tripdetail-notes-save-btn__gVeE9:disabled {
+  opacity: 0.4;
+  cursor: not-allowed;
+}
+
+/* Public sharing */
+.detail_wayfarly-tripdetail-share-row__DNqJd {
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  gap: 1rem;
+}
+
+.detail_wayfarly-tripdetail-toggle__4eFqQ {
+  flex-shrink: 0;
+  width: 42px;
+  height: 24px;
+  border-radius: 999px;
+  background: var(--surface-dim);
+  border: 1px solid var(--border-color);
+  position: relative;
+  transition: background-color 0.25s ease, border-color 0.25s ease;
+}
+
+.detail_wayfarly-tripdetail-toggle__4eFqQ[data-on="true"] {
+  background: var(--wf-brass);
+  border-color: var(--wf-brass);
+}
+
+.detail_wayfarly-tripdetail-toggle-knob__9X8r5 {
+  position: absolute;
+  top: 2px;
+  left: 2px;
+  width: 18px;
+  height: 18px;
+  border-radius: 999px;
+  background: var(--surface);
+  box-shadow: 0 2px 6px rgba(13, 27, 42, 0.3);
+  transition: transform 0.3s cubic-bezier(0.34, 1.56, 0.64, 1);
+}
+
+.detail_wayfarly-tripdetail-toggle__4eFqQ[data-on="true"] .detail_wayfarly-tripdetail-toggle-knob__9X8r5 {
+  transform: translateX(18px);
+  background: var(--wf-ink);
+}
+
+.detail_wayfarly-tripdetail-share-link-row__nIhmL {
+  display: flex;
+  gap: 0.4rem;
+  margin-top: 0.9rem;
+}
+
+/*!**************************************************************************************************************************************************************************************************************************************************************************************!*\
+  !*** css ./node_modules/next/dist/build/webpack/loaders/css-loader/src/index.js??ruleSet[1].rules[15].oneOf[5].use[2]!./node_modules/next/dist/build/webpack/loaders/postcss-loader/src/index.js??ruleSet[1].rules[15].oneOf[5].use[3]!./src/components/ui/ImageDropzone.module.css ***!
+  \**************************************************************************************************************************************************************************************************************************************************************************************/
+/* wayfarly-dropzone-* : scoped, collision-safe class names */
+
+.ImageDropzone_wayfarly-dropzone-root__cncwZ {
+  border: 1.5px dashed var(--border-color);
+  border-radius: 16px;
+  padding: 1.4rem;
+  text-align: center;
+  cursor: pointer;
+  transition: border-color 0.2s ease, background-color 0.2s ease;
+  position: relative;
+}
+
+.ImageDropzone_wayfarly-dropzone-root__cncwZ:hover,
+.ImageDropzone_wayfarly-dropzone-root__cncwZ[data-dragging="true"] {
+  border-color: var(--wf-brass);
+  background: var(--surface-dim);
+}
+
+.ImageDropzone_wayfarly-dropzone-input__vzGTD {
+  position: absolute;
+  inset: 0;
+  opacity: 0;
+  cursor: pointer;
+}
+
+.ImageDropzone_wayfarly-dropzone-icon__90mHR {
+  margin-bottom: 0.4rem;
+  color: var(--wf-brass);
+}
+
+.ImageDropzone_wayfarly-dropzone-label__JvxDU {
+  font-size: 0.85rem;
+  opacity: 0.75;
+}
+
+.ImageDropzone_wayfarly-dropzone-hint__8u_Lg {
+  font-size: 0.72rem;
+  opacity: 0.5;
+  margin-top: 0.3rem;
+}
+
+.ImageDropzone_wayfarly-dropzone-preview__wuhqz {
+  width: 100%;
+  height: 140px;
+  border-radius: 12px;
+  object-fit: cover;
+  margin-bottom: 0.7rem;
+}
+
+.ImageDropzone_wayfarly-dropzone-error__P3aCm {
+  margin-top: 0.6rem;
+  font-size: 0.76rem;
+  color: var(--wf-coral);
+}
+
+.ImageDropzone_wayfarly-dropzone-spinner__YQKQu {
+  width: 22px;
+  height: 22px;
+  border-radius: 999px;
+  border: 2.5px solid var(--border-color);
+  border-top-color: var(--wf-brass);
+  margin: 0 auto 0.5rem;
+  animation: ImageDropzone_wayfarly-dropzone-spin__WZOTl 0.7s linear infinite;
+}
+
+@keyframes ImageDropzone_wayfarly-dropzone-spin__WZOTl {
+  to {
+    transform: rotate(360deg);
+  }
+}
+

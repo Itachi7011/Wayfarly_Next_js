@@ -1,0 +1,126 @@
+/* wayfarly-settings-* : scoped, collision-safe class names */
+
+.wayfarly-settings-shell {
+  max-width: 640px;
+  margin: 0 auto;
+  padding: 2.4rem 1.5rem 4rem;
+}
+
+.wayfarly-settings-heading {
+  font-family: var(--font-display);
+  font-size: clamp(1.6rem, 3vw, 2.1rem);
+  font-weight: 600;
+}
+
+.wayfarly-settings-sub {
+  margin-top: 0.4rem;
+  opacity: 0.65;
+  font-size: 0.9rem;
+}
+
+.wayfarly-settings-section {
+  margin-top: 2rem;
+  padding: 1.4rem;
+  border-radius: 20px;
+  background: var(--surface);
+  border: 1px solid var(--border-color);
+}
+
+.wayfarly-settings-section[data-danger="true"] {
+  border-color: color-mix(in srgb, var(--wf-coral) 40%, var(--border-color));
+}
+
+.wayfarly-settings-section-title {
+  font-size: 0.76rem;
+  font-weight: 700;
+  text-transform: uppercase;
+  letter-spacing: 0.08em;
+  color: var(--wf-brass);
+  margin-bottom: 1rem;
+}
+
+.wayfarly-settings-section[data-danger="true"] .wayfarly-settings-section-title {
+  color: var(--wf-coral);
+}
+
+.wayfarly-settings-row {
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  gap: 1rem;
+  padding: 0.8rem 0;
+  border-top: 1px solid var(--border-color);
+}
+
+.wayfarly-settings-row:first-of-type {
+  border-top: none;
+  padding-top: 0;
+}
+
+.wayfarly-settings-row-label {
+  font-size: 0.88rem;
+  font-weight: 600;
+}
+
+.wayfarly-settings-row-desc {
+  font-size: 0.78rem;
+  opacity: 0.6;
+  margin-top: 0.2rem;
+}
+
+.wayfarly-settings-select {
+  padding: 0.5rem 0.7rem;
+  border-radius: 10px;
+  border: 1px solid var(--border-color);
+  background: var(--surface-dim);
+  color: var(--foreground);
+  font-size: 0.84rem;
+}
+
+.wayfarly-settings-toggle {
+  flex-shrink: 0;
+  width: 42px;
+  height: 24px;
+  border-radius: 999px;
+  background: var(--surface-dim);
+  border: 1px solid var(--border-color);
+  position: relative;
+  transition: background-color 0.25s ease, border-color 0.25s ease;
+}
+
+.wayfarly-settings-toggle[data-on="true"] {
+  background: var(--wf-brass);
+  border-color: var(--wf-brass);
+}
+
+.wayfarly-settings-toggle-knob {
+  position: absolute;
+  top: 2px;
+  left: 2px;
+  width: 18px;
+  height: 18px;
+  border-radius: 999px;
+  background: var(--surface);
+  box-shadow: 0 2px 6px rgba(13, 27, 42, 0.3);
+  transition: transform 0.3s cubic-bezier(0.34, 1.56, 0.64, 1);
+}
+
+.wayfarly-settings-toggle[data-on="true"] .wayfarly-settings-toggle-knob {
+  transform: translateX(18px);
+  background: var(--wf-ink);
+}
+
+.wayfarly-settings-danger-btn {
+  padding: 0.6rem 1.1rem;
+  border-radius: 999px;
+  border: 1px solid var(--wf-coral);
+  color: var(--wf-coral);
+  font-size: 0.82rem;
+  font-weight: 700;
+  transition: background-color 0.2s ease, color 0.2s ease;
+}
+
+.wayfarly-settings-danger-btn:hover {
+  background: var(--wf-coral);
+  color: #fff;
+}

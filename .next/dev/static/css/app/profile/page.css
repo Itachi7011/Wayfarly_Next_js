@@ -1,0 +1,84 @@
+/*!******************************************************************************************************************************************************************************************************************************************************************************!*\
+  !*** css ./node_modules/next/dist/build/webpack/loaders/css-loader/src/index.js??ruleSet[1].rules[15].oneOf[5].use[2]!./node_modules/next/dist/build/webpack/loaders/postcss-loader/src/index.js??ruleSet[1].rules[15].oneOf[5].use[3]!./src/app/profile/profile.module.css ***!
+  \******************************************************************************************************************************************************************************************************************************************************************************/
+/* wayfarly-profile-* : scoped, collision-safe class names */
+
+.profile_wayfarly-profile-shell__qJw7l {
+  max-width: 720px;
+  margin: 0 auto;
+  padding: 2.4rem 1.5rem 4rem;
+}
+
+.profile_wayfarly-profile-card__3vgGL {
+  background: var(--surface);
+  border: 1px solid var(--border-color);
+  border-radius: 22px;
+  padding: 2rem;
+  text-align: center;
+}
+
+.profile_wayfarly-profile-avatar__i_Vry {
+  width: 92px;
+  height: 92px;
+  border-radius: 999px;
+  margin: 0 auto;
+  display: grid;
+  place-items: center;
+  background: conic-gradient(from 220deg, var(--wf-brass), var(--wf-coral), var(--wf-teal), var(--wf-brass));
+  color: var(--wf-ink);
+  font-family: var(--font-display);
+  font-size: 2rem;
+  font-weight: 700;
+}
+
+.profile_wayfarly-profile-name__dpgSS {
+  margin-top: 1rem;
+  font-family: var(--font-display);
+  font-size: 1.5rem;
+  font-weight: 600;
+}
+
+.profile_wayfarly-profile-email__iPLbd {
+  opacity: 0.6;
+  font-size: 0.88rem;
+  margin-top: 0.2rem;
+}
+
+.profile_wayfarly-profile-stat-row__aG8zd {
+  display: flex;
+  justify-content: center;
+  gap: 2.2rem;
+  margin-top: 1.6rem;
+}
+
+.profile_wayfarly-profile-stat-value__1Afgy {
+  font-family: var(--font-mono);
+  font-size: 1.3rem;
+  font-weight: 700;
+  color: var(--wf-brass);
+}
+
+.profile_wayfarly-profile-stat-label__9j4OP {
+  font-size: 0.72rem;
+  opacity: 0.6;
+  margin-top: 0.2rem;
+}
+
+.profile_wayfarly-profile-settings-list__KEmDP {
+  margin-top: 2rem;
+  text-align: left;
+  display: flex;
+  flex-direction: column;
+  gap: 0.6rem;
+}
+
+.profile_wayfarly-profile-settings-row__zf6PH {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  padding: 0.9rem 1rem;
+  border-radius: 14px;
+  border: 1px solid var(--border-color);
+  font-size: 0.88rem;
+}
+

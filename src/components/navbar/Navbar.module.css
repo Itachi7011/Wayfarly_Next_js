@@ -1,0 +1,329 @@
+/* wayfarly-navbar-* : scoped, collision-safe class names */
+
+.wayfarly-navbar-root {
+  position: sticky;
+  top: 0;
+  z-index: 60;
+  backdrop-filter: blur(14px) saturate(140%);
+  -webkit-backdrop-filter: blur(14px) saturate(140%);
+  background: color-mix(in srgb, var(--background) 78%, transparent);
+  border-bottom: 1px solid var(--border-color);
+  transition: background-color 0.35s ease, border-color 0.35s ease;
+}
+
+.wayfarly-navbar-inner {
+  max-width: 1280px;
+  margin: 0 auto;
+  padding: 0.85rem 1.5rem;
+  display: flex;
+  align-items: center;
+  gap: 1.5rem;
+}
+
+/* Logo */
+.wayfarly-navbar-logo {
+  display: flex;
+  align-items: center;
+  gap: 0.6rem;
+  font-family: var(--font-display);
+  font-weight: 700;
+  font-size: 1.4rem;
+  letter-spacing: -0.01em;
+  color: var(--foreground);
+  white-space: nowrap;
+}
+
+.wayfarly-navbar-logo-mark {
+  position: relative;
+  width: 34px;
+  height: 34px;
+  border-radius: 999px;
+  background: conic-gradient(from 220deg, var(--wf-brass), var(--wf-coral), var(--wf-teal), var(--wf-brass));
+  display: grid;
+  place-items: center;
+  box-shadow: 0 0 0 1px var(--border-color), 0 6px 16px -6px rgba(201, 147, 44, 0.55);
+  transform-style: preserve-3d;
+  transition: transform 0.5s cubic-bezier(0.22, 1, 0.36, 1);
+}
+
+.wayfarly-navbar-logo:hover .wayfarly-navbar-logo-mark {
+  transform: rotate(28deg) scale(1.06);
+}
+
+.wayfarly-navbar-logo-mark svg {
+  width: 18px;
+  height: 18px;
+  color: var(--wf-ink);
+}
+
+/* Primary links */
+.wayfarly-navbar-links {
+  display: none;
+  align-items: center;
+  gap: 0.25rem;
+  margin-left: 0.5rem;
+}
+
+@media (min-width: 1024px) {
+  .wayfarly-navbar-links {
+    display: flex;
+  }
+}
+
+.wayfarly-navbar-link {
+  position: relative;
+  display: inline-flex;
+  align-items: center;
+  gap: 0.3rem;
+  padding: 0.55rem 0.85rem;
+  border-radius: 999px;
+  font-size: 0.92rem;
+  font-weight: 600;
+  color: var(--foreground);
+  opacity: 0.78;
+  transition: opacity 0.25s ease, background-color 0.25s ease;
+}
+
+.wayfarly-navbar-link:hover {
+  opacity: 1;
+  background: var(--surface-dim);
+}
+
+.wayfarly-navbar-link-chevron {
+  transition: transform 0.25s ease;
+}
+
+.wayfarly-navbar-dropdown-group:hover .wayfarly-navbar-link-chevron {
+  transform: rotateX(180deg);
+}
+
+/* Dropdown panel */
+.wayfarly-navbar-dropdown-group {
+  position: relative;
+}
+
+.wayfarly-navbar-dropdown-panel {
+  position: absolute;
+  top: calc(100% + 0.65rem);
+  left: 0;
+  min-width: 300px;
+  background: var(--surface);
+  border: 1px solid var(--border-color);
+  border-radius: 18px;
+  padding: 0.6rem;
+  box-shadow: 0 24px 48px -20px rgba(13, 27, 42, 0.35);
+  opacity: 0;
+  visibility: hidden;
+  transform: translateY(-8px) rotateX(-6deg);
+  transform-origin: top center;
+  transition: opacity 0.25s ease, transform 0.3s cubic-bezier(0.22, 1, 0.36, 1), visibility 0.25s;
+}
+
+.wayfarly-navbar-dropdown-group:hover .wayfarly-navbar-dropdown-panel,
+.wayfarly-navbar-dropdown-group:focus-within .wayfarly-navbar-dropdown-panel {
+  opacity: 1;
+  visibility: visible;
+  transform: translateY(0) rotateX(0deg);
+}
+
+.wayfarly-navbar-dropdown-item {
+  display: flex;
+  align-items: flex-start;
+  gap: 0.7rem;
+  padding: 0.65rem 0.7rem;
+  border-radius: 12px;
+  transition: background-color 0.2s ease, transform 0.2s ease;
+}
+
+.wayfarly-navbar-dropdown-item:hover {
+  background: var(--surface-dim);
+  transform: translateX(3px);
+}
+
+.wayfarly-navbar-dropdown-icon {
+  flex-shrink: 0;
+  width: 34px;
+  height: 34px;
+  border-radius: 10px;
+  display: grid;
+  place-items: center;
+  background: color-mix(in srgb, var(--wf-brass) 16%, transparent);
+  color: var(--wf-brass);
+}
+
+.wayfarly-navbar-dropdown-title {
+  font-size: 0.88rem;
+  font-weight: 700;
+  color: var(--foreground);
+}
+
+.wayfarly-navbar-dropdown-desc {
+  font-size: 0.76rem;
+  color: var(--foreground);
+  opacity: 0.65;
+  margin-top: 0.1rem;
+}
+
+/* nested submenu */
+.wayfarly-navbar-submenu-group {
+  position: relative;
+}
+
+.wayfarly-navbar-submenu-panel {
+  position: absolute;
+  left: calc(100% + 0.4rem);
+  top: -0.4rem;
+  min-width: 220px;
+  background: var(--surface);
+  border: 1px solid var(--border-color);
+  border-radius: 14px;
+  padding: 0.5rem;
+  box-shadow: 0 24px 48px -20px rgba(13, 27, 42, 0.35);
+  opacity: 0;
+  visibility: hidden;
+  transform: translateX(-6px);
+  transition: opacity 0.2s ease, transform 0.25s ease, visibility 0.2s;
+}
+
+.wayfarly-navbar-submenu-group:hover .wayfarly-navbar-submenu-panel {
+  opacity: 1;
+  visibility: visible;
+  transform: translateX(0);
+}
+
+/* Right side controls */
+.wayfarly-navbar-actions {
+  margin-left: auto;
+  display: flex;
+  align-items: center;
+  gap: 0.5rem;
+}
+
+.wayfarly-navbar-search-wrap {
+  display: none;
+  position: relative;
+  align-items: center;
+}
+
+@media (min-width: 900px) {
+  .wayfarly-navbar-search-wrap {
+    display: flex;
+  }
+}
+
+.wayfarly-navbar-search-input {
+  width: 190px;
+  padding: 0.5rem 0.85rem 0.5rem 2.2rem;
+  border-radius: 999px;
+  border: 1px solid var(--border-color);
+  background: var(--surface-dim);
+  font-size: 0.85rem;
+  color: var(--foreground);
+  transition: width 0.3s ease, box-shadow 0.25s ease;
+}
+
+.wayfarly-navbar-search-input:focus {
+  outline: none;
+  width: 240px;
+  box-shadow: 0 0 0 3px color-mix(in srgb, var(--wf-brass) 30%, transparent);
+}
+
+.wayfarly-navbar-search-icon {
+  position: absolute;
+  left: 0.7rem;
+  opacity: 0.55;
+  pointer-events: none;
+}
+
+.wayfarly-navbar-icon-btn {
+  width: 40px;
+  height: 40px;
+  border-radius: 999px;
+  display: grid;
+  place-items: center;
+  color: var(--foreground);
+  border: 1px solid var(--border-color);
+  background: var(--surface);
+  transition: transform 0.35s cubic-bezier(0.22, 1, 0.36, 1), background-color 0.25s ease, box-shadow 0.25s ease;
+}
+
+.wayfarly-navbar-icon-btn:hover {
+  transform: translateY(-2px) rotate(-6deg);
+  box-shadow: 0 10px 20px -10px rgba(13, 27, 42, 0.4);
+}
+
+.wayfarly-navbar-cta {
+  display: inline-flex;
+  align-items: center;
+  gap: 0.4rem;
+  padding: 0.6rem 1.1rem;
+  border-radius: 999px;
+  background: linear-gradient(135deg, var(--wf-brass), var(--wf-coral));
+  color: var(--wf-ink);
+  font-weight: 700;
+  font-size: 0.86rem;
+  box-shadow: 0 12px 24px -12px rgba(255, 107, 74, 0.55);
+  transition: transform 0.3s cubic-bezier(0.22, 1, 0.36, 1), box-shadow 0.3s ease;
+}
+
+.wayfarly-navbar-cta:hover {
+  transform: translateY(-2px) scale(1.02);
+  box-shadow: 0 16px 28px -12px rgba(255, 107, 74, 0.65);
+}
+
+/* Mobile toggle */
+.wayfarly-navbar-burger {
+  display: grid;
+  place-items: center;
+  width: 40px;
+  height: 40px;
+  border-radius: 12px;
+  border: 1px solid var(--border-color);
+  color: var(--foreground);
+}
+
+@media (min-width: 1024px) {
+  .wayfarly-navbar-burger {
+    display: none;
+  }
+}
+
+/* Mobile panel */
+.wayfarly-navbar-mobile-panel {
+  max-height: 0;
+  overflow: hidden;
+  transition: max-height 0.4s cubic-bezier(0.22, 1, 0.36, 1);
+  border-top: 1px solid transparent;
+}
+
+.wayfarly-navbar-mobile-panel[data-open="true"] {
+  max-height: 720px;
+  border-top: 1px solid var(--border-color);
+}
+
+.wayfarly-navbar-mobile-inner {
+  padding: 1rem 1.5rem 1.5rem;
+  display: flex;
+  flex-direction: column;
+  gap: 0.3rem;
+}
+
+.wayfarly-navbar-mobile-link {
+  padding: 0.7rem 0.5rem;
+  border-radius: 12px;
+  font-weight: 600;
+  font-size: 0.95rem;
+}
+
+.wayfarly-navbar-mobile-link:hover {
+  background: var(--surface-dim);
+}
+
+.wayfarly-navbar-mobile-group-title {
+  padding: 0.7rem 0.5rem 0.2rem;
+  font-size: 0.72rem;
+  text-transform: uppercase;
+  letter-spacing: 0.08em;
+  opacity: 0.55;
+  font-weight: 700;
+}

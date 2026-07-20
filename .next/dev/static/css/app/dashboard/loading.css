@@ -1,0 +1,243 @@
+/*!**********************************************************************************************************************************************************************************************************************************************************************************!*\
+  !*** css ./node_modules/next/dist/build/webpack/loaders/css-loader/src/index.js??ruleSet[1].rules[15].oneOf[5].use[2]!./node_modules/next/dist/build/webpack/loaders/postcss-loader/src/index.js??ruleSet[1].rules[15].oneOf[5].use[3]!./src/app/dashboard/dashboard.module.css ***!
+  \**********************************************************************************************************************************************************************************************************************************************************************************/
+/* wayfarly-dash-* : scoped, collision-safe class names */
+
+.dashboard_wayfarly-dash-shell__1Tl8C {
+  display: grid;
+  grid-template-columns: 240px 1fr;
+  max-width: 1280px;
+  margin: 0 auto;
+  min-height: calc(100vh - 200px);
+}
+
+@media (max-width: 900px) {
+  .dashboard_wayfarly-dash-shell__1Tl8C {
+    grid-template-columns: 1fr;
+  }
+}
+
+.dashboard_wayfarly-dash-sidebar__oZdtv {
+  border-right: 1px solid var(--border-color);
+  padding: 2rem 1.2rem;
+  display: flex;
+  flex-direction: column;
+  gap: 0.3rem;
+}
+
+@media (max-width: 900px) {
+  .dashboard_wayfarly-dash-sidebar__oZdtv {
+    display: none;
+  }
+}
+
+.dashboard_wayfarly-dash-nav-item__4aI8Z {
+  display: flex;
+  align-items: center;
+  gap: 0.7rem;
+  padding: 0.7rem 0.85rem;
+  border-radius: 12px;
+  font-size: 0.88rem;
+  font-weight: 600;
+  opacity: 0.72;
+  transition: background-color 0.2s ease, opacity 0.2s ease, transform 0.2s ease;
+}
+
+.dashboard_wayfarly-dash-nav-item__4aI8Z:hover {
+  background: var(--surface-dim);
+  opacity: 1;
+  transform: translateX(2px);
+}
+
+.dashboard_wayfarly-dash-nav-item__4aI8Z[data-active="true"] {
+  background: color-mix(in srgb, var(--wf-brass) 15%, transparent);
+  color: var(--wf-brass);
+  opacity: 1;
+}
+
+.dashboard_wayfarly-dash-main__MhGrH {
+  padding: 2rem 1.5rem 3rem;
+}
+
+.dashboard_wayfarly-dash-mobile-tabs__EZHYK {
+  display: none;
+  gap: 0.5rem;
+  overflow-x: auto;
+  padding-bottom: 1.2rem;
+  margin-bottom: 0.4rem;
+  border-bottom: 1px solid var(--border-color);
+}
+
+@media (max-width: 900px) {
+  .dashboard_wayfarly-dash-mobile-tabs__EZHYK {
+    display: flex;
+  }
+}
+
+.dashboard_wayfarly-dash-mobile-tab__umI69 {
+  flex: 0 0 auto;
+  padding: 0.5rem 0.9rem;
+  border-radius: 999px;
+  border: 1px solid var(--border-color);
+  font-size: 0.82rem;
+  font-weight: 600;
+}
+
+.dashboard_wayfarly-dash-heading__tTQ3j {
+  font-family: var(--font-display);
+  font-size: clamp(1.5rem, 3vw, 2rem);
+  font-weight: 600;
+}
+
+.dashboard_wayfarly-dash-subheading__f_oNX {
+  margin-top: 0.35rem;
+  opacity: 0.65;
+  font-size: 0.92rem;
+}
+
+.dashboard_wayfarly-dash-stat-grid__9PUsD {
+  margin-top: 1.6rem;
+  display: grid;
+  grid-template-columns: repeat(3, 1fr);
+  gap: 1rem;
+}
+
+@media (max-width: 640px) {
+  .dashboard_wayfarly-dash-stat-grid__9PUsD {
+    grid-template-columns: 1fr;
+  }
+}
+
+.dashboard_wayfarly-dash-stat-card__HjQtM {
+  padding: 1.3rem 1.4rem;
+  border-radius: 18px;
+  background: var(--surface);
+  border: 1px solid var(--border-color);
+  position: relative;
+  overflow: hidden;
+}
+
+.dashboard_wayfarly-dash-stat-card__HjQtM::after {
+  content: "";
+  position: absolute;
+  right: -20px;
+  top: -20px;
+  width: 90px;
+  height: 90px;
+  border-radius: 999px;
+  background: color-mix(in srgb, var(--wf-brass) 10%, transparent);
+}
+
+.dashboard_wayfarly-dash-stat-value__JapAU {
+  font-family: var(--font-mono);
+  font-size: 1.7rem;
+  font-weight: 700;
+  color: var(--wf-brass);
+}
+
+.dashboard_wayfarly-dash-stat-label__VcTzp {
+  margin-top: 0.3rem;
+  font-size: 0.82rem;
+  opacity: 0.65;
+}
+
+.dashboard_wayfarly-dash-section___n29k {
+  margin-top: 2.4rem;
+}
+
+.dashboard_wayfarly-dash-section-title__l_dDf {
+  font-weight: 700;
+  font-size: 1.05rem;
+  margin-bottom: 1rem;
+}
+
+.dashboard_wayfarly-dash-trip-list__qbXzk {
+  display: grid;
+  grid-template-columns: repeat(2, 1fr);
+  gap: 1rem;
+}
+
+@media (max-width: 700px) {
+  .dashboard_wayfarly-dash-trip-list__qbXzk {
+    grid-template-columns: 1fr;
+  }
+}
+
+.dashboard_wayfarly-dash-trip-row__nDTm3 {
+  display: flex;
+  align-items: center;
+  gap: 0.9rem;
+  padding: 0.9rem;
+  border-radius: 14px;
+  background: var(--surface);
+  border: 1px solid var(--border-color);
+  transition: transform 0.25s ease, box-shadow 0.25s ease;
+}
+
+.dashboard_wayfarly-dash-trip-row__nDTm3:hover {
+  transform: translateY(-3px);
+  box-shadow: 0 20px 34px -20px rgba(13, 27, 42, 0.35);
+}
+
+.dashboard_wayfarly-dash-trip-thumb__7dRO_ {
+  width: 48px;
+  height: 48px;
+  border-radius: 12px;
+  flex-shrink: 0;
+}
+
+.dashboard_wayfarly-dash-trip-title__Cubl3 {
+  font-weight: 700;
+  font-size: 0.9rem;
+}
+
+.dashboard_wayfarly-dash-trip-meta__ZQmgo {
+  font-size: 0.76rem;
+  opacity: 0.6;
+  margin-top: 0.15rem;
+}
+
+.dashboard_wayfarly-dash-status-pill__pQlnU {
+  margin-left: auto;
+  font-size: 0.68rem;
+  font-weight: 700;
+  padding: 0.25rem 0.6rem;
+  border-radius: 999px;
+  background: color-mix(in srgb, var(--wf-teal) 18%, transparent);
+  color: var(--wf-teal);
+  white-space: nowrap;
+}
+
+.dashboard_wayfarly-dash-activity-list__AwLSy {
+  display: flex;
+  flex-direction: column;
+  gap: 0.7rem;
+}
+
+.dashboard_wayfarly-dash-activity-row__ZpgzR {
+  display: flex;
+  align-items: center;
+  gap: 0.7rem;
+  padding: 0.8rem 1rem;
+  border-radius: 12px;
+  background: var(--surface);
+  border: 1px solid var(--border-color);
+  font-size: 0.85rem;
+}
+
+.dashboard_wayfarly-dash-activity-dot__1wigd {
+  width: 8px;
+  height: 8px;
+  border-radius: 999px;
+  background: var(--wf-coral);
+  flex-shrink: 0;
+}
+
+.dashboard_wayfarly-dash-activity-time__DM1sO {
+  margin-left: auto;
+  font-size: 0.74rem;
+  opacity: 0.55;
+  font-family: var(--font-mono);
+  white-space: nowrap;
+}
+

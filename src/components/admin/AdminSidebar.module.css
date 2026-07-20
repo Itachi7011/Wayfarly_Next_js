@@ -1,0 +1,183 @@
+/* wayfarly-adminsidebar-* : scoped, collision-safe class names */
+
+.wayfarly-adminsidebar-root {
+  position: fixed;
+  top: 0;
+  left: 0;
+  bottom: 0;
+  z-index: 70;
+  width: 260px;
+  background: var(--wf-ink);
+  color: var(--wf-paper);
+  border-right: 1px solid rgba(248, 245, 238, 0.1);
+  display: flex;
+  flex-direction: column;
+  transition: width 0.4s cubic-bezier(0.22, 1, 0.36, 1);
+  overflow-x: hidden;
+}
+
+.wayfarly-adminsidebar-root[data-expanded="false"] {
+  width: 76px;
+}
+
+@media (max-width: 860px) {
+  .wayfarly-adminsidebar-root {
+    transform: translateX(-100%);
+  }
+  .wayfarly-adminsidebar-root[data-mobile-open="true"] {
+    transform: translateX(0);
+  }
+}
+
+.wayfarly-adminsidebar-brand {
+  display: flex;
+  align-items: center;
+  gap: 0.7rem;
+  padding: 1.3rem 1.1rem;
+  border-bottom: 1px solid rgba(248, 245, 238, 0.1);
+  white-space: nowrap;
+}
+
+.wayfarly-adminsidebar-brand-mark {
+  width: 32px;
+  height: 32px;
+  flex-shrink: 0;
+  border-radius: 999px;
+  display: grid;
+  place-items: center;
+  background: conic-gradient(from 220deg, var(--wf-brass), var(--wf-coral), var(--wf-teal), var(--wf-brass));
+  color: var(--wf-ink);
+}
+
+.wayfarly-adminsidebar-brand-text {
+  font-family: var(--font-display);
+  font-weight: 700;
+  font-size: 1.05rem;
+  opacity: 1;
+  transition: opacity 0.25s ease;
+}
+
+.wayfarly-adminsidebar-root[data-expanded="false"] .wayfarly-adminsidebar-brand-text {
+  opacity: 0;
+  width: 0;
+}
+
+.wayfarly-adminsidebar-nav {
+  flex: 1;
+  overflow-y: auto;
+  padding: 0.9rem 0.7rem;
+  display: flex;
+  flex-direction: column;
+  gap: 0.2rem;
+}
+
+.wayfarly-adminsidebar-item {
+  display: flex;
+  align-items: center;
+  gap: 0.75rem;
+  padding: 0.65rem 0.75rem;
+  border-radius: 12px;
+  font-size: 0.86rem;
+  font-weight: 600;
+  color: var(--wf-paper);
+  opacity: 0.75;
+  white-space: nowrap;
+  transition: background-color 0.2s ease, opacity 0.2s ease, transform 0.2s ease;
+}
+
+.wayfarly-adminsidebar-item:hover {
+  background: rgba(248, 245, 238, 0.08);
+  opacity: 1;
+  transform: translateX(2px);
+}
+
+.wayfarly-adminsidebar-item[data-active="true"] {
+  background: color-mix(in srgb, var(--wf-brass) 22%, transparent);
+  color: var(--wf-brass-soft);
+  opacity: 1;
+}
+
+.wayfarly-adminsidebar-item-icon {
+  flex-shrink: 0;
+  display: grid;
+  place-items: center;
+}
+
+.wayfarly-adminsidebar-item-label {
+  transition: opacity 0.2s ease;
+}
+
+.wayfarly-adminsidebar-root[data-expanded="false"] .wayfarly-adminsidebar-item-label,
+.wayfarly-adminsidebar-root[data-expanded="false"] .wayfarly-adminsidebar-chevron {
+  display: none;
+}
+
+.wayfarly-adminsidebar-group-btn {
+  width: 100%;
+  text-align: left;
+}
+
+.wayfarly-adminsidebar-chevron {
+  margin-left: auto;
+  transition: transform 0.25s ease;
+}
+
+.wayfarly-adminsidebar-chevron[data-open="true"] {
+  transform: rotate(180deg);
+}
+
+.wayfarly-adminsidebar-submenu {
+  overflow: hidden;
+  max-height: 0;
+  transition: max-height 0.35s ease;
+  padding-left: 2.1rem;
+}
+
+.wayfarly-adminsidebar-submenu[data-open="true"] {
+  max-height: 320px;
+}
+
+.wayfarly-adminsidebar-subitem {
+  display: block;
+  padding: 0.5rem 0.6rem;
+  font-size: 0.8rem;
+  opacity: 0.65;
+  border-radius: 8px;
+  white-space: nowrap;
+}
+
+.wayfarly-adminsidebar-subitem:hover {
+  opacity: 1;
+  background: rgba(248, 245, 238, 0.06);
+}
+
+.wayfarly-adminsidebar-footer {
+  padding: 0.9rem;
+  border-top: 1px solid rgba(248, 245, 238, 0.1);
+}
+
+.wayfarly-adminsidebar-collapse-btn {
+  width: 100%;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  gap: 0.5rem;
+  padding: 0.6rem;
+  border-radius: 10px;
+  border: 1px solid rgba(248, 245, 238, 0.15);
+  font-size: 0.78rem;
+  font-weight: 700;
+  transition: background-color 0.2s ease, transform 0.2s ease;
+}
+
+.wayfarly-adminsidebar-collapse-btn:hover {
+  background: rgba(248, 245, 238, 0.08);
+}
+
+.wayfarly-adminsidebar-collapse-icon {
+  transition: transform 0.4s cubic-bezier(0.22, 1, 0.36, 1);
+}
+
+.wayfarly-adminsidebar-root[data-expanded="false"] .wayfarly-adminsidebar-collapse-icon {
+  transform: rotate(180deg);
+}

@@ -1,0 +1,70 @@
+/* wayfarly-dropzone-* : scoped, collision-safe class names */
+
+.wayfarly-dropzone-root {
+  border: 1.5px dashed var(--border-color);
+  border-radius: 16px;
+  padding: 1.4rem;
+  text-align: center;
+  cursor: pointer;
+  transition: border-color 0.2s ease, background-color 0.2s ease;
+  position: relative;
+}
+
+.wayfarly-dropzone-root:hover,
+.wayfarly-dropzone-root[data-dragging="true"] {
+  border-color: var(--wf-brass);
+  background: var(--surface-dim);
+}
+
+.wayfarly-dropzone-input {
+  position: absolute;
+  inset: 0;
+  opacity: 0;
+  cursor: pointer;
+}
+
+.wayfarly-dropzone-icon {
+  margin-bottom: 0.4rem;
+  color: var(--wf-brass);
+}
+
+.wayfarly-dropzone-label {
+  font-size: 0.85rem;
+  opacity: 0.75;
+}
+
+.wayfarly-dropzone-hint {
+  font-size: 0.72rem;
+  opacity: 0.5;
+  margin-top: 0.3rem;
+}
+
+.wayfarly-dropzone-preview {
+  width: 100%;
+  height: 140px;
+  border-radius: 12px;
+  object-fit: cover;
+  margin-bottom: 0.7rem;
+}
+
+.wayfarly-dropzone-error {
+  margin-top: 0.6rem;
+  font-size: 0.76rem;
+  color: var(--wf-coral);
+}
+
+.wayfarly-dropzone-spinner {
+  width: 22px;
+  height: 22px;
+  border-radius: 999px;
+  border: 2.5px solid var(--border-color);
+  border-top-color: var(--wf-brass);
+  margin: 0 auto 0.5rem;
+  animation: wayfarly-dropzone-spin 0.7s linear infinite;
+}
+
+@keyframes wayfarly-dropzone-spin {
+  to {
+    transform: rotate(360deg);
+  }
+}

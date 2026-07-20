@@ -1,0 +1,358 @@
+/*!*******************************************************************************************************************************************************************************************************************************************************************!*\
+  !*** css ./node_modules/next/dist/build/webpack/loaders/css-loader/src/index.js??ruleSet[1].rules[15].oneOf[5].use[2]!./node_modules/next/dist/build/webpack/loaders/postcss-loader/src/index.js??ruleSet[1].rules[15].oneOf[5].use[3]!./src/app/page.module.css ***!
+  \*******************************************************************************************************************************************************************************************************************************************************************/
+/* wayfarly-landing-* : scoped, collision-safe class names */
+
+.page_wayfarly-landing-hero__Pw9JK {
+  position: relative;
+  max-width: 1280px;
+  margin: 0 auto;
+  padding: clamp(2.5rem, 6vw, 5.5rem) 1.5rem clamp(3rem, 8vw, 6rem);
+  display: grid;
+  grid-template-columns: 1.05fr 0.95fr;
+  gap: 3rem;
+  align-items: center;
+}
+
+@media (max-width: 900px) {
+  .page_wayfarly-landing-hero__Pw9JK {
+    grid-template-columns: 1fr;
+    padding-top: 2rem;
+  }
+}
+
+.page_wayfarly-landing-eyebrow__e_Jaj {
+  display: inline-flex;
+  align-items: center;
+  gap: 0.5rem;
+  font-family: var(--font-mono);
+  font-size: 0.72rem;
+  letter-spacing: 0.12em;
+  text-transform: uppercase;
+  padding: 0.4rem 0.8rem;
+  border-radius: 999px;
+  border: 1px solid var(--border-color);
+  color: var(--wf-teal);
+  background: color-mix(in srgb, var(--wf-teal) 10%, transparent);
+}
+
+.page_wayfarly-landing-headline__Vta_J {
+  font-family: var(--font-display);
+  font-weight: 600;
+  font-size: clamp(2.4rem, 5.2vw, 4.2rem);
+  line-height: 1.05;
+  letter-spacing: -0.02em;
+  margin-top: 1.1rem;
+}
+
+.page_wayfarly-landing-headline__Vta_J em {
+  font-style: italic;
+  color: var(--wf-brass);
+}
+
+.page_wayfarly-landing-subtext__Ih9wj {
+  margin-top: 1.4rem;
+  font-size: 1.08rem;
+  line-height: 1.7;
+  color: var(--foreground);
+  opacity: 0.72;
+  max-width: 46ch;
+}
+
+.page_wayfarly-landing-cta-row__sRevE {
+  display: flex;
+  flex-wrap: wrap;
+  gap: 0.9rem;
+  margin-top: 2rem;
+}
+
+.page_wayfarly-landing-cta-primary__Rw3K6 {
+  display: inline-flex;
+  align-items: center;
+  gap: 0.5rem;
+  padding: 0.85rem 1.5rem;
+  border-radius: 999px;
+  background: linear-gradient(135deg, var(--wf-brass), var(--wf-coral));
+  color: var(--wf-ink);
+  font-weight: 700;
+  box-shadow: 0 18px 34px -14px rgba(255, 107, 74, 0.55);
+  transition: transform 0.3s cubic-bezier(0.22, 1, 0.36, 1), box-shadow 0.3s ease;
+}
+
+.page_wayfarly-landing-cta-primary__Rw3K6:hover {
+  transform: translateY(-3px);
+  box-shadow: 0 22px 40px -14px rgba(255, 107, 74, 0.65);
+}
+
+.page_wayfarly-landing-cta-secondary__4O_Sf {
+  display: inline-flex;
+  align-items: center;
+  gap: 0.5rem;
+  padding: 0.85rem 1.5rem;
+  border-radius: 999px;
+  border: 1px solid var(--border-color);
+  color: var(--foreground);
+  font-weight: 700;
+  transition: background-color 0.25s ease, transform 0.25s ease;
+}
+
+.page_wayfarly-landing-cta-secondary__4O_Sf:hover {
+  background: var(--surface-dim);
+  transform: translateY(-3px);
+}
+
+.page_wayfarly-landing-stat-row__1Xet4 {
+  display: flex;
+  gap: 2.2rem;
+  margin-top: 2.6rem;
+  flex-wrap: wrap;
+}
+
+.page_wayfarly-landing-stat-num__WpP5G {
+  font-family: var(--font-mono);
+  font-size: 1.5rem;
+  font-weight: 700;
+  color: var(--wf-brass);
+}
+
+.page_wayfarly-landing-stat-label__MDQx5 {
+  font-size: 0.76rem;
+  opacity: 0.6;
+  margin-top: 0.15rem;
+}
+
+/* Hero visual: route-line map card */
+.page_wayfarly-landing-hero-visual__ypYlP {
+  position: relative;
+  border-radius: 28px;
+  padding: 1.6rem;
+  background: var(--surface);
+  border: 1px solid var(--border-color);
+  box-shadow: 0 40px 70px -30px rgba(13, 27, 42, 0.35);
+  min-height: 420px;
+  overflow: hidden;
+}
+
+.page_wayfarly-landing-hero-visual__ypYlP::before {
+  content: "";
+  position: absolute;
+  inset: 0;
+  background-image: radial-gradient(circle, var(--border-color) 1px, transparent 1px);
+  background-size: 22px 22px;
+  opacity: 0.5;
+}
+
+.page_wayfarly-landing-route-svg__MCPpl {
+  position: relative;
+  width: 100%;
+  height: 100%;
+}
+
+.page_wayfarly-landing-route-path__PjuQZ {
+  fill: none;
+  stroke: var(--wf-brass);
+  stroke-width: 2.5;
+  stroke-dasharray: 8 8;
+  stroke-linecap: round;
+  animation: page_wayfarly-dash-move__BzBAE 22s linear infinite;
+}
+
+@keyframes page_wayfarly-dash-move__BzBAE {
+  to {
+    stroke-dashoffset: -400;
+  }
+}
+
+.page_wayfarly-landing-pin-card__TK0cd {
+  position: absolute;
+  display: flex;
+  align-items: center;
+  gap: 0.5rem;
+  padding: 0.5rem 0.8rem;
+  border-radius: 12px;
+  background: var(--wf-ink);
+  color: var(--wf-paper);
+  font-size: 0.76rem;
+  font-weight: 700;
+  box-shadow: 0 14px 26px -12px rgba(13, 27, 42, 0.55);
+  animation: page_wayfarly-pin-float__XR2l0 5s ease-in-out infinite;
+}
+
+@keyframes page_wayfarly-pin-float__XR2l0 {
+  0%, 100% { transform: translateY(0); }
+  50% { transform: translateY(-6px); }
+}
+
+/* Features */
+.page_wayfarly-landing-section__DCtGI {
+  max-width: 1280px;
+  margin: 0 auto;
+  padding: clamp(2rem, 5vw, 4rem) 1.5rem;
+}
+
+.page_wayfarly-landing-section-head__SQWUm {
+  max-width: 640px;
+  margin-bottom: 2.4rem;
+}
+
+.page_wayfarly-landing-section-title__m4TEh {
+  font-family: var(--font-display);
+  font-size: clamp(1.7rem, 3vw, 2.4rem);
+  font-weight: 600;
+  letter-spacing: -0.01em;
+}
+
+.page_wayfarly-landing-section-sub__q0HhY {
+  margin-top: 0.6rem;
+  opacity: 0.68;
+  line-height: 1.6;
+}
+
+.page_wayfarly-landing-feature-grid__iKbwc {
+  display: grid;
+  grid-template-columns: repeat(4, 1fr);
+  gap: 1.25rem;
+}
+
+@media (max-width: 1024px) {
+  .page_wayfarly-landing-feature-grid__iKbwc {
+    grid-template-columns: repeat(2, 1fr);
+  }
+}
+
+@media (max-width: 560px) {
+  .page_wayfarly-landing-feature-grid__iKbwc {
+    grid-template-columns: 1fr;
+  }
+}
+
+.page_wayfarly-landing-feature-card__xuAcG {
+  padding: 1.6rem;
+  border-radius: 20px;
+  background: var(--surface);
+  border: 1px solid var(--border-color);
+  transition: transform 0.35s cubic-bezier(0.22, 1, 0.36, 1), box-shadow 0.35s ease, border-color 0.3s ease;
+}
+
+.page_wayfarly-landing-feature-card__xuAcG:hover {
+  transform: translateY(-6px);
+  box-shadow: 0 30px 50px -24px rgba(13, 27, 42, 0.35);
+  border-color: var(--wf-brass);
+}
+
+.page_wayfarly-landing-feature-icon__YGgI_ {
+  width: 44px;
+  height: 44px;
+  border-radius: 12px;
+  display: grid;
+  place-items: center;
+  background: color-mix(in srgb, var(--wf-brass) 16%, transparent);
+  color: var(--wf-brass);
+  margin-bottom: 1rem;
+}
+
+.page_wayfarly-landing-feature-title__icPX1 {
+  font-weight: 700;
+  font-size: 1rem;
+}
+
+.page_wayfarly-landing-feature-desc__8IwVK {
+  margin-top: 0.4rem;
+  font-size: 0.86rem;
+  opacity: 0.65;
+  line-height: 1.55;
+}
+
+/* Boarding-pass trip preview strip (signature element) */
+.page_wayfarly-landing-pass-row__m8eYe {
+  display: flex;
+  gap: 1.4rem;
+  overflow-x: auto;
+  padding-bottom: 0.6rem;
+  scrollbar-width: thin;
+}
+
+.page_wayfarly-landing-pass-card__Nz7nK {
+  flex: 0 0 auto;
+  width: 300px;
+  border-radius: 18px;
+  background: var(--surface);
+  border: 1px solid var(--border-color);
+  position: relative;
+  overflow: hidden;
+  transition: transform 0.3s ease;
+}
+
+.page_wayfarly-landing-pass-card__Nz7nK:hover {
+  transform: translateY(-4px);
+}
+
+.page_wayfarly-landing-pass-cover__CNoXE {
+  height: 280px;
+position:relative;
+overflow: hidden;
+}
+
+.page_wayfarly-landing-pass-body__6ipOm {
+  padding: 1.1rem 1.2rem 1.3rem;
+}
+
+.page_wayfarly-landing-pass-dest__IkA0j {
+  font-family: var(--font-display);
+  font-size: 1.1rem;
+  font-weight: 600;
+}
+
+.page_wayfarly-landing-pass-meta__1QMEz {
+  margin-top: 0.5rem;
+  display: flex;
+  justify-content: space-between;
+  font-family: var(--font-mono);
+  font-size: 0.72rem;
+  opacity: 0.65;
+}
+
+.page_wayfarly-landing-pass-perforation__4GbYe {
+  position: relative;
+  height: 1px;
+  margin: 0.9rem 0;
+  border-top: 1.5px dashed var(--border-color);
+}
+
+.page_wayfarly-landing-pass-perforation__4GbYe::before,
+.page_wayfarly-landing-pass-perforation__4GbYe::after {
+  content: "";
+  position: absolute;
+  top: -7px;
+  width: 14px;
+  height: 14px;
+  border-radius: 999px;
+  background: var(--background);
+}
+
+.page_wayfarly-landing-pass-perforation__4GbYe::before { left: -1.2rem; }
+.page_wayfarly-landing-pass-perforation__4GbYe::after { right: -1.2rem; }
+
+/* CTA band */
+.page_wayfarly-landing-cta-band__6DhsM {
+  max-width: 1280px;
+  margin: 0 auto 4rem;
+  padding: clamp(2.2rem, 5vw, 3.4rem);
+  border-radius: 28px;
+  background: var(--wf-ink);
+  color: var(--wf-paper);
+  display: flex;
+  flex-wrap: wrap;
+  align-items: center;
+  justify-content: space-between;
+  gap: 1.5rem;
+  background-image: radial-gradient(circle at 90% 10%, rgba(201, 147, 44, 0.25), transparent 50%);
+}
+
+.page_wayfarly-landing-cta-band-title__oSblJ {
+  font-family: var(--font-display);
+  font-size: clamp(1.5rem, 3vw, 2rem);
+  font-weight: 600;
+  max-width: 30ch;
+}
+

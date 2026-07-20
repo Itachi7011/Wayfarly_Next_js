@@ -1,0 +1,88 @@
+/* wayfarly-admindash-* : scoped, collision-safe class names */
+
+.wayfarly-admindash-heading {
+  font-family: var(--font-display);
+  font-size: 1.7rem;
+  font-weight: 600;
+}
+
+.wayfarly-admindash-stat-grid {
+  margin-top: 1.4rem;
+  display: grid;
+  grid-template-columns: repeat(4, 1fr);
+  gap: 1rem;
+}
+
+@media (max-width: 900px) {
+  .wayfarly-admindash-stat-grid {
+    grid-template-columns: repeat(2, 1fr);
+  }
+}
+
+@media (max-width: 500px) {
+  .wayfarly-admindash-stat-grid {
+    grid-template-columns: 1fr;
+  }
+}
+
+.wayfarly-admindash-stat-card {
+  padding: 1.2rem;
+  border-radius: 16px;
+  background: var(--surface);
+  border: 1px solid var(--border-color);
+}
+
+.wayfarly-admindash-stat-value {
+  font-family: var(--font-mono);
+  font-size: 1.5rem;
+  font-weight: 700;
+  color: var(--wf-brass);
+}
+
+.wayfarly-admindash-stat-label {
+  margin-top: 0.3rem;
+  font-size: 0.8rem;
+  opacity: 0.6;
+}
+
+.wayfarly-admindash-table-wrap {
+  margin-top: 2rem;
+  border-radius: 16px;
+  border: 1px solid var(--border-color);
+  overflow: hidden;
+  background: var(--surface);
+}
+
+.wayfarly-admindash-table {
+  width: 100%;
+  border-collapse: collapse;
+  font-size: 0.85rem;
+}
+
+.wayfarly-admindash-table th {
+  text-align: left;
+  padding: 0.8rem 1rem;
+  font-size: 0.72rem;
+  text-transform: uppercase;
+  letter-spacing: 0.06em;
+  opacity: 0.55;
+  border-bottom: 1px solid var(--border-color);
+}
+
+.wayfarly-admindash-table td {
+  padding: 0.8rem 1rem;
+  border-bottom: 1px solid var(--border-color);
+}
+
+.wayfarly-admindash-table tr:last-child td {
+  border-bottom: none;
+}
+
+.wayfarly-admindash-pill {
+  font-size: 0.7rem;
+  font-weight: 700;
+  padding: 0.25rem 0.6rem;
+  border-radius: 999px;
+  background: color-mix(in srgb, var(--wf-teal) 18%, transparent);
+  color: var(--wf-teal);
+}

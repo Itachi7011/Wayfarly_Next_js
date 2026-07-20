@@ -1,0 +1,206 @@
+/* wayfarly-info-* : shared styles for simple content pages (about, careers, press, privacy, terms) */
+
+.wayfarly-info-hero {
+  max-width: 780px;
+  margin: 0 auto;
+  padding: clamp(2.4rem, 6vw, 4rem) 1.5rem 1rem;
+}
+
+.wayfarly-info-eyebrow {
+  display: inline-flex;
+  align-items: center;
+  gap: 0.5rem;
+  font-family: var(--font-mono);
+  font-size: 0.72rem;
+  letter-spacing: 0.12em;
+  text-transform: uppercase;
+  padding: 0.4rem 0.8rem;
+  border-radius: 999px;
+  border: 1px solid var(--border-color);
+  color: var(--wf-teal);
+  background: color-mix(in srgb, var(--wf-teal) 10%, transparent);
+}
+
+.wayfarly-info-title {
+  font-family: var(--font-display);
+  font-weight: 600;
+  font-size: clamp(2rem, 4.5vw, 3rem);
+  line-height: 1.1;
+  letter-spacing: -0.02em;
+  margin-top: 1rem;
+}
+
+.wayfarly-info-subtitle {
+  margin-top: 0.9rem;
+  font-size: 1.02rem;
+  line-height: 1.7;
+  opacity: 0.7;
+  max-width: 60ch;
+}
+
+.wayfarly-info-updated {
+  margin-top: 1rem;
+  font-size: 0.76rem;
+  font-family: var(--font-mono);
+  opacity: 0.5;
+}
+
+.wayfarly-info-body {
+  max-width: 780px;
+  margin: 0 auto;
+  padding: 1rem 1.5rem clamp(3rem, 6vw, 5rem);
+}
+
+.wayfarly-info-section {
+  margin-top: 2.2rem;
+}
+
+.wayfarly-info-section-title {
+  font-family: var(--font-display);
+  font-size: 1.35rem;
+  font-weight: 600;
+  margin-bottom: 0.8rem;
+}
+
+.wayfarly-info-prose {
+  font-size: 0.94rem;
+  line-height: 1.75;
+  opacity: 0.78;
+}
+
+.wayfarly-info-prose + .wayfarly-info-prose {
+  margin-top: 0.9rem;
+}
+
+.wayfarly-info-list {
+  margin-top: 0.6rem;
+  display: flex;
+  flex-direction: column;
+  gap: 0.5rem;
+}
+
+.wayfarly-info-list li {
+  font-size: 0.9rem;
+  opacity: 0.78;
+  padding-left: 1.2rem;
+  position: relative;
+  line-height: 1.6;
+}
+
+.wayfarly-info-list li::before {
+  content: "";
+  position: absolute;
+  left: 0;
+  top: 0.55rem;
+  width: 6px;
+  height: 6px;
+  border-radius: 999px;
+  background: var(--wf-brass);
+}
+
+.wayfarly-info-divider {
+  height: 1px;
+  background: var(--border-color);
+  margin: 2.2rem 0;
+}
+
+.wayfarly-info-stat-row {
+  display: grid;
+  grid-template-columns: repeat(3, 1fr);
+  gap: 1rem;
+  margin-top: 1.6rem;
+}
+
+@media (max-width: 560px) {
+  .wayfarly-info-stat-row {
+    grid-template-columns: 1fr;
+  }
+}
+
+.wayfarly-info-stat-card {
+  padding: 1.2rem;
+  border-radius: 16px;
+  background: var(--surface);
+  border: 1px solid var(--border-color);
+}
+
+.wayfarly-info-stat-value {
+  font-family: var(--font-mono);
+  font-size: 1.4rem;
+  font-weight: 700;
+  color: var(--wf-brass);
+}
+
+.wayfarly-info-stat-label {
+  margin-top: 0.3rem;
+  font-size: 0.78rem;
+  opacity: 0.6;
+}
+
+.wayfarly-info-card {
+  padding: 1.4rem;
+  border-radius: 18px;
+  background: var(--surface);
+  border: 1px solid var(--border-color);
+  margin-top: 1rem;
+}
+
+.wayfarly-info-card-title {
+  font-weight: 700;
+  font-size: 0.95rem;
+}
+
+.wayfarly-info-card-meta {
+  margin-top: 0.3rem;
+  font-size: 0.8rem;
+  opacity: 0.6;
+}
+
+.wayfarly-info-cta-btn {
+  display: inline-flex;
+  align-items: center;
+  gap: 0.5rem;
+  margin-top: 1.6rem;
+  padding: 0.8rem 1.4rem;
+  border-radius: 999px;
+  background: linear-gradient(135deg, var(--wf-brass), var(--wf-coral));
+  color: var(--wf-ink);
+  font-weight: 700;
+  font-size: 0.88rem;
+  transition: transform 0.3s cubic-bezier(0.22, 1, 0.36, 1);
+}
+
+.wayfarly-info-cta-btn:hover {
+  transform: translateY(-2px);
+}
+
+.wayfarly-info-status-row {
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  padding: 0.9rem 1.1rem;
+  border-radius: 14px;
+  background: var(--surface);
+  border: 1px solid var(--border-color);
+  margin-top: 0.7rem;
+}
+
+.wayfarly-info-status-dot {
+  width: 8px;
+  height: 8px;
+  border-radius: 999px;
+  background: var(--wf-teal);
+  display: inline-block;
+  margin-right: 0.5rem;
+}
+
+.wayfarly-info-status-label {
+  font-size: 0.88rem;
+  font-weight: 600;
+}
+
+.wayfarly-info-status-value {
+  font-size: 0.78rem;
+  font-family: var(--font-mono);
+  color: var(--wf-teal);
+}

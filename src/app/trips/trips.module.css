@@ -1,0 +1,192 @@
+/* wayfarly-trips-* : scoped, collision-safe class names */
+
+.wayfarly-trips-header {
+  max-width: 1280px;
+  margin: 0 auto;
+  padding: 2.2rem 1.5rem 0;
+  display: flex;
+  flex-wrap: wrap;
+  justify-content: space-between;
+  align-items: flex-end;
+  gap: 1rem;
+}
+
+.wayfarly-trips-heading {
+  font-family: var(--font-display);
+  font-size: clamp(1.6rem, 3vw, 2.1rem);
+  font-weight: 600;
+}
+
+.wayfarly-trips-toolbar {
+  max-width: 1280px;
+  margin: 1.4rem auto 0;
+  padding: 0 1.5rem;
+  display: flex;
+  flex-wrap: wrap;
+  gap: 0.9rem;
+  align-items: center;
+}
+
+.wayfarly-trips-search-wrap {
+  position: relative;
+  flex: 1;
+  min-width: 220px;
+}
+
+.wayfarly-trips-search-input {
+  width: 100%;
+  padding: 0.7rem 1rem 0.7rem 2.4rem;
+  border-radius: 12px;
+  border: 1px solid var(--border-color);
+  background: var(--surface);
+  font-size: 0.88rem;
+}
+
+.wayfarly-trips-search-icon {
+  position: absolute;
+  left: 0.85rem;
+  top: 50%;
+  transform: translateY(-50%);
+  opacity: 0.5;
+}
+
+.wayfarly-trips-filter-row {
+  display: flex;
+  gap: 0.5rem;
+}
+
+.wayfarly-trips-filter-btn {
+  padding: 0.6rem 1rem;
+  border-radius: 999px;
+  border: 1px solid var(--border-color);
+  font-size: 0.82rem;
+  font-weight: 600;
+  opacity: 0.7;
+  transition: all 0.2s ease;
+}
+
+.wayfarly-trips-filter-btn[data-active="true"] {
+  background: var(--wf-ink);
+  color: var(--wf-paper);
+  opacity: 1;
+  border-color: var(--wf-ink);
+}
+
+.wayfarly-trips-grid {
+  max-width: 1280px;
+  margin: 1.8rem auto 4rem;
+  padding: 0 1.5rem;
+  display: grid;
+  grid-template-columns: repeat(3, 1fr);
+  gap: 1.4rem;
+}
+
+@media (max-width: 1024px) {
+  .wayfarly-trips-grid {
+    grid-template-columns: repeat(2, 1fr);
+  }
+}
+
+@media (max-width: 640px) {
+  .wayfarly-trips-grid {
+    grid-template-columns: 1fr;
+  }
+}
+
+.wayfarly-trips-card {
+  border-radius: 20px;
+  overflow: hidden;
+  background: var(--surface);
+  border: 1px solid var(--border-color);
+  transition: transform 0.3s cubic-bezier(0.22, 1, 0.36, 1), box-shadow 0.3s ease;
+}
+
+.wayfarly-trips-card:hover {
+  transform: translateY(-5px);
+  box-shadow: 0 30px 55px -26px rgba(13, 27, 42, 0.4);
+}
+
+.wayfarly-trips-card-cover {
+  height: 340px;
+  position: relative;
+}
+
+.wayfarly-trips-card-status {
+  position: absolute;
+  top: 0.8rem;
+  right: 0.8rem;
+  font-size: 0.68rem;
+  font-weight: 700;
+  padding: 0.3rem 0.65rem;
+  border-radius: 999px;
+  background: rgba(13, 27, 42, 0.55);
+  color: #fff;
+  backdrop-filter: blur(4px);
+}
+
+.wayfarly-trips-card-body {
+  padding: 1.1rem 1.2rem 1.3rem;
+}
+
+.wayfarly-trips-card-title {
+  font-family: var(--font-display);
+  font-size: 1.15rem;
+  font-weight: 600;
+}
+
+.wayfarly-trips-card-dates {
+  margin-top: 0.3rem;
+  font-size: 0.78rem;
+  opacity: 0.6;
+  font-family: var(--font-mono);
+}
+
+.wayfarly-trips-card-budget-row {
+  display: flex;
+  justify-content: space-between;
+  margin-top: 0.9rem;
+  font-size: 0.78rem;
+}
+
+.wayfarly-trips-progress-track {
+  margin-top: 0.4rem;
+  height: 6px;
+  border-radius: 999px;
+  background: var(--surface-dim);
+  overflow: hidden;
+}
+
+.wayfarly-trips-progress-fill {
+  height: 100%;
+  border-radius: 999px;
+  background: linear-gradient(90deg, var(--wf-brass), var(--wf-coral));
+}
+
+.wayfarly-trips-card-actions {
+  margin-top: 1rem;
+  display: flex;
+  gap: 0.5rem;
+}
+
+.wayfarly-trips-card-action {
+  flex: 1;
+  text-align: center;
+  padding: 0.5rem;
+  border-radius: 10px;
+  font-size: 0.78rem;
+  font-weight: 700;
+  border: 1px solid var(--border-color);
+  transition: background-color 0.2s ease, color 0.2s ease, border-color 0.2s ease;
+}
+
+.wayfarly-trips-card-action:hover {
+  background: var(--wf-ink);
+  color: var(--wf-paper);
+  border-color: var(--wf-ink);
+}
+
+.wayfarly-trips-card-action[data-danger="true"]:hover {
+  background: var(--wf-coral);
+  border-color: var(--wf-coral);
+  color: #fff;
+}

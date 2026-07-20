@@ -1,0 +1,94 @@
+@import "tailwindcss";
+
+@custom-variant dark (&:where(.dark, .dark *));
+
+:root {
+  /* Wayfarly design tokens - "cartography" palette */
+  --wf-ink: #0d1b2a;         /* deep harbor navy - dark bg / light text */
+  --wf-ink-soft: #16283d;    /* elevated surface, dark mode */
+  --wf-paper: #f8f5ee;       /* warm chart-paper - light bg */
+  --wf-paper-dim: #efe9db;   /* light mode elevated surface */
+  --wf-brass: #c9932c;       /* primary accent - brass compass */
+  --wf-brass-soft: #e4b459;
+  --wf-coral: #ff6b4a;       /* CTA / highlight accent */
+  --wf-teal: #1f8a80;        /* links / success / route lines */
+  --wf-line: rgba(13, 27, 42, 0.12);
+  --wf-line-dark: rgba(248, 245, 238, 0.14);
+
+  --background: var(--wf-paper);
+  --foreground: var(--wf-ink);
+  --surface: #ffffff;
+  --surface-dim: var(--wf-paper-dim);
+  --border-color: var(--wf-line);
+}
+
+.dark {
+  --background: var(--wf-ink);
+  --foreground: var(--wf-paper);
+  --surface: var(--wf-ink-soft);
+  --surface-dim: #10202f;
+  --border-color: var(--wf-line-dark);
+}
+
+@theme inline {
+  --color-background: var(--background);
+  --color-foreground: var(--foreground);
+  --color-surface: var(--surface);
+  --color-surface-dim: var(--surface-dim);
+  --color-border: var(--border-color);
+  --color-wf-ink: var(--wf-ink);
+  --color-wf-ink-soft: var(--wf-ink-soft);
+  --color-wf-paper: var(--wf-paper);
+  --color-wf-paper-dim: var(--wf-paper-dim);
+  --color-wf-brass: var(--wf-brass);
+  --color-wf-brass-soft: var(--wf-brass-soft);
+  --color-wf-coral: var(--wf-coral);
+  --color-wf-teal: var(--wf-teal);
+  --font-display: var(--font-fraunces);
+  --font-sans: var(--font-jakarta);
+  --font-mono: var(--font-space-mono);
+}
+
+* {
+  border-color: var(--border-color);
+}
+
+html {
+  scroll-behavior: smooth;
+}
+
+body {
+  background: var(--background);
+  color: var(--foreground);
+  font-family: var(--font-jakarta), system-ui, sans-serif;
+  transition: background-color 0.35s ease, color 0.35s ease;
+}
+
+::selection {
+  background: var(--wf-brass);
+  color: var(--wf-ink);
+}
+
+::-webkit-scrollbar {
+  width: 10px;
+  height: 10px;
+}
+::-webkit-scrollbar-track {
+  background: transparent;
+}
+::-webkit-scrollbar-thumb {
+  background: var(--wf-brass);
+  border-radius: 999px;
+  border: 2px solid var(--background);
+}
+
+@media (prefers-reduced-motion: reduce) {
+  *,
+  *::before,
+  *::after {
+    animation-duration: 0.001ms !important;
+    animation-iteration-count: 1 !important;
+    transition-duration: 0.001ms !important;
+    scroll-behavior: auto !important;
+  }
+}
