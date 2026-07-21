@@ -14,9 +14,17 @@ import styles from "./detail.module.css";
 type ActivityTime = "Morning" | "Afternoon" | "Evening";
 const TIMES: ActivityTime[] = ["Morning", "Afternoon", "Evening"];
 
-export default function ItineraryPanel({ tripId, days }: { tripId: string; days: ItineraryDay[] }) {
+export default function ItineraryPanel({
+  tripId,
+  days,
+}: {
+  tripId: string;
+  days: ItineraryDay[];
+}) {
   const [localDays, setLocalDays] = useState(days);
-  const [draftByDay, setDraftByDay] = useState<Record<number, { time: ActivityTime; title: string }>>({});
+  const [draftByDay, setDraftByDay] = useState<
+    Record<number, { time: ActivityTime; title: string }>
+  >({});
   const [, startTransition] = useTransition();
 
   const addDay = () => {
@@ -44,9 +52,16 @@ export default function ItineraryPanel({ tripId, days }: { tripId: string; days:
 
     const tempId = `temp-${Date.now()}`;
     setLocalDays((prev) =>
-      prev.map((d) => (d.day === dayNumber ? { ...d, activities: [...d.activities, { id: tempId, time, title }] } : d))
+      prev.map((d) =>
+        d.day === dayNumber
+          ? { ...d, activities: [...d.activities, { id: tempId, time, title }] }
+          : d,
+      ),
     );
-    setDraftByDay((prev) => ({ ...prev, [dayNumber]: { time: "Morning", title: "" } }));
+    setDraftByDay((prev) => ({
+      ...prev,
+      [dayNumber]: { time: "Morning", title: "" },
+    }));
 
     startTransition(async () => {
       await addItineraryActivity(tripId, dayNumber, { time, title });
@@ -56,8 +71,13 @@ export default function ItineraryPanel({ tripId, days }: { tripId: string; days:
   const removeActivity = (dayNumber: number, activityId: string) => {
     setLocalDays((prev) =>
       prev.map((d) =>
-        d.day === dayNumber ? { ...d, activities: d.activities.filter((a) => a.id !== activityId) } : d
-      )
+        d.day === dayNumber
+          ? {
+              ...d,
+              activities: d.activities.filter((a) => a.id !== activityId),
+            }
+          : d,
+      ),
     );
 
     startTransition(async () => {
@@ -72,15 +92,25 @@ export default function ItineraryPanel({ tripId, days }: { tripId: string; days:
       </div>
 
       {localDays.length === 0 && (
-        <p className={styles["wayfarly-tripdetail-notes-text"]}>No itinerary days added yet.</p>
+        <p className={styles["wayfarly-tripdetail-notes-text"]}>
+          No itinerary days added yet.
+        </p>
       )}
 
       {localDays.map((day) => {
-        const draft = draftByDay[day.day] ?? { time: "Morning" as ActivityTime, title: "" };
+        const draft = draftByDay[day.day] ?? {
+          time: "Morning" as ActivityTime,
+          title: "",
+        };
         return (
-          <div key={day.day} className={styles["wayfarly-tripdetail-day-block"]}>
+          <div
+            key={day.day}
+            className={styles["wayfarly-tripdetail-day-block"]}
+          >
             <div className={styles["wayfarly-tripdetail-day-header"]}>
-              <span className={styles["wayfarly-tripdetail-day-label"]}>Day {day.day}</span>
+              <span className={styles["wayfarly-tripdetail-day-label"]}>
+                Day {day.day}
+              </span>
               <button
                 className={styles["wayfarly-tripdetail-day-remove"]}
                 onClick={() => removeDay(day.day)}
@@ -91,8 +121,13 @@ export default function ItineraryPanel({ tripId, days }: { tripId: string; days:
             </div>
 
             {day.activities.map((a) => (
-              <div key={a.id} className={styles["wayfarly-tripdetail-activity-row"]}>
-                <span className={styles["wayfarly-tripdetail-activity-time"]}>{a.time}</span>
+              <div
+                key={a.id}
+                className={styles["wayfarly-tripdetail-activity-row"]}
+              >
+                <span className={styles["wayfarly-tripdetail-activity-time"]}>
+                  {a.time}
+                </span>
                 <span style={{ flex: 1 }}>{a.title}</span>
                 <button
                   className={styles["wayfarly-tripdetail-activity-remove"]}
@@ -109,7 +144,13 @@ export default function ItineraryPanel({ tripId, days }: { tripId: string; days:
                 className={styles["wayfarly-tripdetail-inline-select"]}
                 value={draft.time}
                 onChange={(e) =>
-                  setDraftByDay((prev) => ({ ...prev, [day.day]: { ...draft, time: e.target.value as ActivityTime } }))
+                  setDraftByDay((prev) => ({
+                    ...prev,
+                    [day.day]: {
+                      ...draft,
+                      time: e.target.value as ActivityTime,
+                    },
+                  }))
                 }
                 aria-label="Time of day"
               >
@@ -123,8 +164,16 @@ export default function ItineraryPanel({ tripId, days }: { tripId: string; days:
                 className={styles["wayfarly-tripdetail-inline-input"]}
                 placeholder="Add an activity..."
                 value={draft.title}
-                onChange={(e) => setDraftByDay((prev) => ({ ...prev, [day.day]: { ...draft, title: e.target.value } }))}
-                onKeyDown={(e) => e.key === "Enter" && (e.preventDefault(), addActivity(day.day))}
+                onChange={(e) =>
+                  setDraftByDay((prev) => ({
+                    ...prev,
+                    [day.day]: { ...draft, title: e.target.value },
+                  }))
+                }
+                onKeyDown={(e) =>
+                  e.key === "Enter" &&
+                  (e.preventDefault(), addActivity(day.day))
+                }
               />
               <button
                 className={styles["wayfarly-tripdetail-inline-add-btn"]}
@@ -138,7 +187,10 @@ export default function ItineraryPanel({ tripId, days }: { tripId: string; days:
         );
       })}
 
-      <button className={styles["wayfarly-tripdetail-add-day-btn"]} onClick={addDay}>
+      <button
+        className={styles["wayfarly-tripdetail-add-day-btn"]}
+        onClick={addDay}
+      >
         <Plus size={15} /> Add a day
       </button>
     </div>
